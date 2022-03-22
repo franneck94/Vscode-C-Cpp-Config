@@ -1,8 +1,8 @@
 # VSCode C/C++ Config
 
-Creates config files for simple C/C++ projects.  
+Creates config files for C/C++ projects.  
 
-If the standard (non-minimal) command is used, the following files will be created in the local .vscode folder:
+If the **non-minimal** command is used, the following files will be created in the local .vscode folder:
 
 - settings.json: Best default settings for C/C++, CMake etc. extensions
 - c_cpp_properties.json: Best default settings for the compiler
@@ -10,7 +10,7 @@ If the standard (non-minimal) command is used, the following files will be creat
 - launch.json: Debug configs to debug C/C++ programs that were compiled by the tasks
 - Makefile: Makefile targets that are used in launch.json and tasks.json
 
-if the minimal command is used, the following files will be created in the local .vscode folder:
+if the **minimal** command is used, the following files will be created in the local .vscode folder:
 
 - settings.json: Best default settings for C/C++, CMake etc. extensions
 - c_cpp_properties.json: Best default settings for the compiler
@@ -58,5 +58,5 @@ Refer to the [CHANGELOG](CHANGELOG.md).
 
 ## License
 
-Copyright (C) 2021 Jan Schaffranek.  
+Copyright (C) 2022 Jan Schaffranek.  
 Licensed under the [MIT License](LICENSE).
