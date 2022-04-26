@@ -1,5 +1,9 @@
 # C/C++ Config Change Log
 
+## Version 2.6.1: April 26, 2022
+
+- **Info**: Updated error logic
+
 ## Version 2.6.0: March 22, 2022
 
 - **Info**: Updated settings

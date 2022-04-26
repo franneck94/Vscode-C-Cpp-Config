@@ -109,12 +109,13 @@ export function checkCompilers() {
 
 function isCCourse(currentFolder: string) {
   return (
-    currentFolder.includes('udemyc') && !currentFolder.includes('udemycpp')
+    currentFolder.toLowerCase().includes('udemyc') &&
+    !currentFolder.toLowerCase().includes('udemycpp')
   );
 }
 
 function isCppCourse(currentFolder: string) {
-  return currentFolder.includes('udemycpp');
+  return currentFolder.toLowerCase().includes('udemycpp');
 }
 
 function initGenerateCCommandDisposable(context: vscode.ExtensionContext) {
@@ -233,6 +234,7 @@ function writeFiles(isCppCommand: boolean) {
   if (!pathExists(vscodePath)) {
     const message = 'Error: .vscode folder could not be generated.';
     vscode.window.showErrorMessage(message);
+    return;
   } else {
     VSCODE_DIR_FILES.forEach((filename) => {
       const targetFilename = path.join(vscodePath, filename);
@@ -277,7 +279,12 @@ function writeFiles(isCppCommand: boolean) {
           // Makefile
           const templateData = fs.readFileSync(templateFilename);
           fs.writeFileSync(targetFilename, templateData);
-        } catch (err) {}
+        } catch (err) {
+          vscode.window.showErrorMessage(
+            `Could not create file: ${targetFilename}`,
+          );
+          return;
+        }
       }
     });
   }
@@ -297,6 +304,7 @@ function writeMinimalFiles(isCppProject: boolean) {
   if (!pathExists(vscodePath)) {
     const message = 'Error: .vscode folder could not be generated.';
     vscode.window.showErrorMessage(message);
+    return;
   } else {
     writeLocalVscodeDirMinimalFiles(vscodePath, templateOsPath);
   }
@@ -321,7 +329,12 @@ function writeRootDirFiles(templatePath: string, isCppProject: boolean) {
     try {
       const templateData = fs.readFileSync(templateFilename);
       fs.writeFileSync(targetFilename, templateData);
-    } catch (err) {}
+    } catch (err) {
+      vscode.window.showErrorMessage(
+        `Could not create file: ${targetFilename}`,
+      );
+      return;
+    }
   });
 }
 

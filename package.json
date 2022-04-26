@@ -2,7 +2,7 @@
     "name": "vscode-c-cpp-config",
     "displayName": "C/C++ Config",
     "description": "Creates all needed config files for C/C++ projects.",
-    "version": "2.6.0",
+    "version": "2.6.1",
     "publisher": "franneck94",
     "license": "MIT",
     "icon": "icon.png",
