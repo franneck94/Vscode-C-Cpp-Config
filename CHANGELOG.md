@@ -1,5 +1,9 @@
 # C/C++ Config Change Log
 
+## Version 2.6.3: May 23, 2022
+
+- **Info**: Updated compiler args in properties file
+
 ## Version 2.6.2: May 17, 2022
 
 - **Info**: Fixed false settings name
