@@ -1,5 +1,9 @@
 # C/C++ Config Change Log
 
+## Version 5.2.1: May 11, 2023
+
+- **Info**: Bugfix for CMake projects
+
 ## Version 5.2.0: May 10, 2023
 
 - **Info**: Added error message when the user wants to generate the config files without having any folder opened (500iq move)

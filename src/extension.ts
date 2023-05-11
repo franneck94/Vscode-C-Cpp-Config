@@ -34,13 +34,11 @@ const ROOT_DIR_CMAKE_PROJECT_FILES = [
 ];
 
 const TOOLS_DIR_CMAKE_PROJECT_FILES = [
-  'iwyu_tool.py',
   'run-clang-format.py',
   'run-clang-tidy.py',
 ];
 
 const GITHUB_DIR_CMAKE_PROJECT_FILES = [
-  'codeql.yml',
   'documentation.yml',
   'macos.yml',
   'pre-commit.yml',
