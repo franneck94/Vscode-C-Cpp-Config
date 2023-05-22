@@ -18,10 +18,8 @@ The following files will be created in the root directory for all commands:
 
 The following files will be created when the root dir contains a CMakeLists.txt:
 
-- Makefile
 - .pre-commit-config.yaml
 - .cmake-format.yaml
-- tools/iwyu_tool.py
 - tools/run-clang-format.py
 - tools/run-clang-tidy.py
 - .github/workflows/documentation.yml

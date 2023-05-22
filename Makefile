@@ -25,6 +25,5 @@ clean:
 	rm -f test/Cmake/.gitignore
 	rm -f test/Cmake/.cmake-format.yaml
 	rm -f test/Cmake/.pre-commit-config.yaml
-	rm -f test/Cmake/Makefile
 
 .phony: clean

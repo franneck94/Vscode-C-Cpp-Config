@@ -1,5 +1,9 @@
 # C/C++ Config Change Log
 
+## Version 5.3.0: May 22, 2023
+
+- **Info**: Update for CMake projects
+
 ## Version 5.2.1: May 11, 2023
 
 - **Info**: Bugfix for CMake projects
