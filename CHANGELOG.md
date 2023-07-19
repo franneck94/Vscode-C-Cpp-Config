@@ -6,10 +6,6 @@
 
 ## Version 5.4.0: May 23, 2023
 
-- N/A
-
-## Version 5.3.0: May 23, 2023
-
 - **Info**: Some updates in settings and clang tidy
 
 ## Version 5.3.0: May 22, 2023
