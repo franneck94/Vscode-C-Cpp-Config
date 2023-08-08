@@ -1,5 +1,9 @@
 # C/C++ Config Change Log
 
+## Version 5.6.0: May 23, 2023
+
+- **Info**: Some settings updates
+
 ## Version 5.5.0: Jul 19, 2023
 
 - **Info**: Updated C/C++ Runner Default Settings
