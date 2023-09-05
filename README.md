@@ -1,6 +1,6 @@
 # VSCode C/C++ Config
 
-Creates config files for C/C++ projects.  
+Creates config files with pre-defined settings for modern C/C++ projects.  
 
 ![ExampleGif](./media/CCPPConfig.gif?raw=true)
 

@@ -1,5 +1,9 @@
 # C/C++ Config Change Log
 
+## Version 5.8.0: Sep 05, 2023
+
+- **Info**: Updated doc
+
 ## Version 5.7.0: May 24, 2023
 
 - **Info**: Updated clang tidy
