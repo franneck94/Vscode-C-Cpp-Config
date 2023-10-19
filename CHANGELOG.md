@@ -1,5 +1,9 @@
 # C/C++ Config Change Log
 
+## Version 5.8.1: Oct 19, 2023
+
+- **Info**: Settings Fix
+
 ## Version 5.8.0: Sep 05, 2023
 
 - **Info**: Updated doc

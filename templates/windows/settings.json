@@ -37,7 +37,6 @@
         "*.md": "vscode.markdown.preview.editor",
         "*.svg": "svgPreviewer.customEditor"
     },
-    "workbench.editor.untitled.hint": "hidden",
     "workbench.colorTheme": "Default Dark+",
     "git.enableSmartCommit": true,
     "git.autofetch": true,
