@@ -203,6 +203,8 @@
         "editor.formatOnSave": false,
         "editor.defaultFormatter": "cheshirekow.cmake-format"
     },
+    "cmake.showOptionsMovedNotification": true,
+    "cmake.options.statusBarVisibility": "visible",
     "doxdocgen.file.fileTemplate": "@file {name}",
     "doxdocgen.cpp.tparamTemplate": "@tparam {param} ",
     "doxdocgen.generic.briefTemplate": "@brief {text}",
