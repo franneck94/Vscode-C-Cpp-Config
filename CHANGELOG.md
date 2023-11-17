@@ -1,6 +1,6 @@
 # C/C++ Config Change Log
 
-## Version 5.0.0: Nov 17, 2023
+## Version 5.9.0: Nov 17, 2023
 
 - **Info**: New Cmake Settings for the status bar
 
