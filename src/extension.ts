@@ -10,8 +10,7 @@ import {
   writeJsonFile,
 } from './utils/fileUtils';
 import { getGlobalSetting } from './utils/settings';
-import { getOperatingSystem } from './utils/systemUtils';
-import { LanguageMode, OperatingSystems } from './utils/types';
+import { LanguageMode } from './utils/types';
 import { disposeItem } from './utils/vscodeUtils';
 
 let generateCCommandDisposable: vscode.Disposable | undefined;
@@ -48,7 +47,6 @@ const GITHUB_DIR_CMAKE_PROJECT_FILES = [
 
 export const EXTENSION_NAME = 'C_Cpp_Config';
 export let WORKSPACE_FOLDER: string | undefined;
-export let OPERATING_SYSTEM: OperatingSystems | undefined;
 
 let LINE_LENGTH: number = 120;
 let IS_AGGRESSIVE: boolean = false;
@@ -79,7 +77,6 @@ export function activate(context: vscode.ExtensionContext) {
   }
 
   extensionPath = context.extensionPath;
-  OPERATING_SYSTEM = getOperatingSystem();
 
   initGenerateCCommandDisposable(context);
   initGenerateCppCommandDisposable(context);
@@ -159,19 +156,14 @@ function initGenerateCppCommandDisposable(context: vscode.ExtensionContext) {
 }
 
 function getFilepaths() {
-  if (!extensionPath || !WORKSPACE_FOLDER || !OPERATING_SYSTEM) {
+  if (!extensionPath || !WORKSPACE_FOLDER) {
     return {};
   }
 
-  const templateOsPath = path.join(
-    extensionPath,
-    'templates',
-    OPERATING_SYSTEM,
-  );
   const templatePath = path.join(extensionPath, 'templates');
   const vscodePath = path.join(WORKSPACE_FOLDER, '.vscode');
 
-  return { templateOsPath, templatePath, vscodePath };
+  return { templatePath, vscodePath };
 }
 
 function safeMkdir(path: string) {
@@ -187,14 +179,14 @@ function safeMkdir(path: string) {
 }
 
 function writeFiles(languageMode: LanguageMode) {
-  const { templateOsPath, templatePath, vscodePath } = getFilepaths();
-  if (!templateOsPath || !templatePath || !vscodePath) return;
+  const { templatePath, vscodePath } = getFilepaths();
+  if (!templatePath || !templatePath || !vscodePath) return;
 
   if (!safeMkdir(vscodePath)) return;
 
   VSCODE_DIR_FILES.forEach((filename) => {
     const targetFilename = path.join(vscodePath, filename);
-    const templateOsFilename = path.join(templateOsPath, filename);
+    const templateOsFilename = path.join(templatePath, filename);
 
     if (filename === 'settings.json') {
       const templateData: {
