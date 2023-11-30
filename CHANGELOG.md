@@ -1,5 +1,9 @@
 # C/C++ Config Change Log
 
+## Version 5.11.0: Nov 30, 2023
+
+- **Info**: Added missing settings for C/C++ Runner
+
 ## Version 5.10.0: Nov 27, 2023
 
 - **Info**: Some internal changes
