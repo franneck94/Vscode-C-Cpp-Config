@@ -10,7 +10,6 @@
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.suggest.preview": true,
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
-    "terminal.integrated.enableMultiLinePasteWarning": false,
     "debug.onTaskErrors": "debugAnyway",
     "explorer.compactFolders": false,
     "explorer.confirmDragAndDrop": false,
