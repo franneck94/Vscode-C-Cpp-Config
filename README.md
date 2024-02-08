@@ -4,11 +4,11 @@ Creates config files with pre-defined settings for modern C/C++ projects.
 
 ![ExampleGif](./media/CCPPConfig.gif?raw=true)
 
-The following file will be created in the local .vscode folder:
+The following file will be created in the local .vscode folder, this might override the already present file:
 
 - settings.json: Best default settings for C/C++, CMake etc. extensions
 
-The following files will be created in the root directory for all commands:
+The following files will be created in the root directory, if they are not yet present*:
 
 - .clang-format: Configuration for the formatting tool
 - .clang-tidy: Configuration for the static linting tool
@@ -16,19 +16,19 @@ The following files will be created in the root directory for all commands:
 - .gitattributes: Gives attributes to pathnames
 - .gitingore: Specifies intentionally untracked files to ignore
 
-The following files will be created when the root dir contains a CMakeLists.txt:
+The following files will be created when the root dir contains a CMakeLists.txt, if they are not yet present*:
 
 - .pre-commit-config.yaml
 - .cmake-format.yaml
 - tools/run-clang-format.py
 - tools/run-clang-tidy.py
-- .github/workflows/documentation.yml
-- .github/workflows/macos.yml
-- .github/workflows/pre-commit.yml
-- .github/workflows/ubuntu.yml
-- .github/workflows/windows.yml
+- .github/workflows/documentation.yaml
+- .github/workflows/macos.yaml
+- .github/workflows/pre-commit.yaml
+- .github/workflows/ubuntu.yaml
+- .github/workflows/windows.yaml
 
-**Note**: If one of these files already exists, they are overridden. However, since you most likely have a git repository, you can then see the fil diff.
+(*) If you still want to have them overridden, just delete them beforehand and execute the generate config files command again.
 
 ## How to use
 
@@ -50,5 +50,5 @@ Refer to the [CHANGELOG](CHANGELOG.md).
 
 ## License
 
-Copyright (C) 2022-2023 Jan Schaffranek.  
+Copyright (C) 2022-2024 Jan Schaffranek.  
 Licensed under the [MIT License](LICENSE).

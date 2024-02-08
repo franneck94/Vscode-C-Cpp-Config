@@ -241,7 +241,25 @@ function writeRootDirFiles(templatePath: string, languageMode: LanguageMode) {
         templateData = Buffer.from(modifiedData.join('\r\n'), 'utf8');
       }
 
-      fs.writeFileSync(targetFilename, templateData);
+      // Dont override root dir files
+      if (!pathExists(targetFilename)) {
+        fs.writeFileSync(targetFilename, templateData);
+      } else if (pathExists(targetFilename) && filename === '.clang-format') {
+        let templateData = fs.readFileSync(targetFilename);
+
+        const data = templateData.toString().split('\n');
+        const modifiedData = data.map((line: string) => {
+          if (line.includes('ColumnLimit')) {
+            return `ColumnLimit:     ${LINE_LENGTH}`;
+          } else {
+            return line;
+          }
+        });
+        templateData = Buffer.from(modifiedData.join('\r\n'), 'utf8');
+
+        // Just override line length
+        fs.writeFileSync(targetFilename, templateData);
+      }
     } catch (err) {
       vscode.window.showErrorMessage(
         `Could not create file: ${targetFilename}`,
@@ -260,7 +278,11 @@ function writeRootDirCmakeFiles(templatePath: string) {
 
     try {
       const templateData = fs.readFileSync(templateFilename);
-      fs.writeFileSync(targetFilename, templateData);
+
+      // Dont override root dir files
+      if (!pathExists(targetFilename)) {
+        fs.writeFileSync(targetFilename, templateData);
+      }
     } catch (err) {
       vscode.window.showErrorMessage(
         `Could not create file: ${targetFilename}`,
@@ -281,7 +303,11 @@ function writeToolsDirCmakeFiles(templatePath: string) {
 
     try {
       const templateData = fs.readFileSync(templateFilename);
-      fs.writeFileSync(targetFilename, templateData);
+
+      // Dont override tools dir files
+      if (!pathExists(targetFilename)) {
+        fs.writeFileSync(targetFilename, templateData);
+      }
     } catch (err) {
       vscode.window.showErrorMessage(
         `Could not create file: ${targetFilename}`,
@@ -312,7 +338,11 @@ function writeGithubDirCmakeFiles(templatePath: string) {
 
     try {
       const templateData = fs.readFileSync(templateFilename);
-      fs.writeFileSync(targetFilename, templateData);
+
+      // Dont override github dir files
+      if (!pathExists(targetFilename)) {
+        fs.writeFileSync(targetFilename, templateData);
+      }
     } catch (err) {
       vscode.window.showErrorMessage(
         `Could not create file: ${targetFilename}`,

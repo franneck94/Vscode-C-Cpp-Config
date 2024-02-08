@@ -1,6 +1,6 @@
 {
     "editor.tabSize": 4,
-    "editor.rulers": [80, 120],
+    "editor.rulers": [120],
     "editor.renderWhitespace": "trailing",
     "editor.suggestSelection": "first",
     "editor.formatOnSave": true,
