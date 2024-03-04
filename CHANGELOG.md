@@ -1,5 +1,9 @@
 # C/C++ Config Change Log
 
+## Version 6.1.0: Mar 04, 2024
+
+- **Info**: Updated gitignore
+
 ## Version 6.0.0: Feb 08, 2024
 
 - **Info**: Root dir and CMake project related files are not overridden anymore
