@@ -1,5 +1,9 @@
 # C/C++ Config Change Log
 
+## Version 6.3.0: Aug 23, 2024
+
+- **Info**: Removed not C/C++ related settings
+
 ## Version 6.2.0: Jul 05, 2024
 
 - **Info**: Removed vscode theme from settings
