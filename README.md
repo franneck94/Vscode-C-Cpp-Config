@@ -14,7 +14,7 @@ The following files will be created in the root directory, if they are not yet p
 - .clang-tidy: Configuration for the static linting tool
 - .editorconfig: Standard editor settings (line-feed, insert new-line, etc.)
 - .gitattributes: Gives attributes to pathnames
-- .gitingore: Specifies intentionally untracked files to ignore
+- .gitignore: Specifies intentionally untracked files to ignore
 
 The following files will be created when the root dir contains a CMakeLists.txt, if they are not yet present*:
 

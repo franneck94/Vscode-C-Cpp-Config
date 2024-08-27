@@ -183,7 +183,7 @@
 
 ## Version 0.4.0: September 26, 2021
 
-- **Improvement**: Added **.gitattributes** and **.gitingore**
+- **Improvement**: Added **.gitattributes** and **.gitignore**
 
 ## Version 0.3.0: September 26, 2021
 
